@@ -67,8 +67,8 @@ class MyWrapper(EWrapper):
 cnx = mysql.connector.connect(host='127.0.0.1', unix_socket='/var/run/mysqld/mysqld.sock',
                               user='USERNAME', passwd='PASSWORD', db='mysql', charset='utf8', auth_plugin='mysql_native_password')
 cur = cnx.cursor()
-cur.execute('USE pipelines')
-jter = 672*2
+cur.execute('USE DB_NAME')
+jter = 672*2 #number of half hours
 
 try:
     for i in range(jter):
